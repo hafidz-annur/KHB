@@ -1,0 +1,72 @@
+id,produk,gambar,alt,created_at,updated_at
+1,1,094248-paving_holand.png,Paving Holland,2024-07-12,2024-07-12
+2,1,holand_spesifikasi.jpg,Paving Holland,2024-07-12,2024-07-12
+3,1,holand_teknik.jpg,Paving Holland,2024-07-12,2024-07-12
+4,1,holand_pemasangan.jpg,Paving Holland,2024-07-12,2024-07-12
+5,2,162739-paving_difabel.png,Paving Difabel,2024-07-12,2024-07-12
+6,2,difabel_spesifikasi.jpg,Paving Difabel,2024-07-12,2024-07-12
+7,2,difabel_teknik.jpg,Paving Difabel,2024-07-12,2024-07-12
+8,2,difabel_pemasangan.jpg,Paving Difabel,2024-07-12,2024-07-12
+9,3,162756-paving_blind_hold.png,Paving Blind Hold,2024-07-12,2024-07-12
+10,3,blindhold_spesifikasi.jpg,Paving Blind Hold,2024-07-12,2024-07-12
+11,3,blindhold_teknik.jpg,Paving Blind Hold,2024-07-12,2024-07-12
+12,3,blindhold_pemasangan.jpg,Paving Blind Hold,2024-07-12,2024-07-12
+13,4,055858-paving_decorative.png,Paving Decorative,2024-07-12,2024-07-12
+14,4,decorative_spesifikasi.jpg,Paving Decorative,2024-07-12,2024-07-12
+15,4,decorative_teknik.jpg,Paving Decorative,2024-07-12,2024-07-12
+16,4,decorative_pemasangan.jpg,Paving Decorative,2024-07-12,2024-07-12
+17,5,055526-paving_grass_block_motif.png,Paving Grass Block Motif,2024-07-12,2024-07-12
+18,5,grassblock_spesifikasi.jpg,Paving Grass Block Motif,2024-07-12,2024-07-12
+19,5,grassblock_teknik.jpg,Paving Grass Block Motif,2024-07-12,2024-07-12
+20,5,grassblock_pemasangan.jpg,Paving Grass Block Motif,2024-07-12,2024-07-12
+21,6,162814-paving_around_of_trees.png,Paving Around Of Trees,2024-07-12,2024-07-12
+22,6,around_spesifikasi.jpg,Paving Around Of Trees,2024-07-12,2024-07-12
+23,6,around_teknik.jpg,Paving Around Of Trees,2024-07-12,2024-07-12
+24,6,around_pemasangan.jpg,Paving Around Of Trees,2024-07-12,2024-07-12
+25,7,095248-uditch.png,Saluran U-Ditch Precast,2024-07-12,2024-07-12
+26,7,u-ditch_spesifikasi.jpg,Saluran U-Ditch Precast,2024-07-12,2024-07-12
+27,7,u-ditch_teknik.jpg,Saluran U-Ditch Precast,2024-07-12,2024-07-12
+28,7,u-ditch_ukuran.jpg,Saluran U-Ditch Precast,2024-07-12,2024-07-12
+29,7,u-ditch_pemasangan.jpg,Saluran U-Ditch Precast,2024-07-12,2024-07-12
+30,8,101702-cover_uditch.png,Cover U-Ditch Precast,2024-07-12,2024-07-12
+31,8,cover_spesifikasi.jpg,Cover U-Ditch Precast,2024-07-12,2024-07-12
+32,8,cover_teknik.jpg,Cover U-Ditch Precast,2024-07-12,2024-07-12
+33,8,cover_ukuran.jpg,Cover U-Ditch Precast,2024-07-12,2024-07-12
+34,8,cover_pemasangan.jpg,Cover U-Ditch Precast,2024-07-12,2024-07-12
+35,9,095722-box_culvert.png,Box Culvert Precast,2024-07-12,2024-07-12
+36,9,box-culvert_spesifikasi.jpg,Box Culvert Precast,2024-07-12,2024-07-12
+37,9,box-culvert_teknik.jpg,Box Culvert Precast,2024-07-12,2024-07-12
+38,9,box-culvert_ukuran.jpg,Box Culvert Precast,2024-07-12,2024-07-12
+39,9,box-culvert_pemasangan.jpg,Box Culvert Precast,2024-07-12,2024-07-12
+40,10,161722-kansteen_L.png,Kansteen Type L,2024-07-12,2024-07-12
+41,10,kansteen-l_spesifikasi.jpg,Kansteen Type L,2024-07-12,2024-07-12
+42,10,kansteen-l_teknik.jpg,Kansteen Type L,2024-07-12,2024-07-12
+43,10,kansteen-l_pemasangan.jpg,Kansteen Type L,2024-07-12,2024-07-12
+44,11,161243-kansteen_L_profil.png,Kansteen Type L Profil,2024-07-12,2024-07-12
+45,11,kansteen-l-profil_spesifikasi.jpg,Kansteen Type L Profil,2024-07-12,2024-07-12
+46,11,kansteen-l-profil_teknik.jpg,Kansteen Type L Profil,2024-07-12,2024-07-12
+47,12,094942-kansteen_s_kecil.png,Kansteen Type S Kecil,2024-07-12,2024-07-12
+48,12,kansteen-s-kecil_spesifikasi.jpg,Kansteen Type S Kecil,2024-07-12,2024-07-12
+49,12,kansteen-s-kecil_teknik.jpg,Kansteen Type S Kecil,2024-07-12,2024-07-12
+50,13,092650-kansteen_s_besar.png,Kansteen Type S Besar,2024-07-12,2024-07-12
+51,13,kansteen-s-besar_spesifikasi.jpg,Kansteen Type S Besar,2024-07-12,2024-07-12
+52,13,kansteen-s-besar_teknik.jpg,Kansteen Type S Besar,2024-07-12,2024-07-12
+53,14,104340-kansteen_50_profil.png,Kansteen Type 50 Profil,2024-07-12,2024-07-12
+54,14,kansteen-50-profil_spesifikasi.jpg,Kansteen Type 50 Profil,2024-07-12,2024-07-12
+55,14,kansteen-50-profil_teknik.jpg,Kansteen Type 50 Profil,2024-07-12,2024-07-12
+56,14,kansteen-50-profil_pemasangan.jpg,Kansteen Type 50 Profil,2024-07-12,2024-07-12
+57,16,104104-kansteen_persegi.png,Pagar Panel Beton Standard,2024-07-12,2024-07-12
+58,16,kansteen-persegi_spesifikasi.jpg,Pagar Panel Beton Standard,2024-07-12,2024-07-12
+59,16,kansteen-persegi_teknik.jpg,Pagar Panel Beton Standard,2024-07-12,2024-07-12
+60,17,091728-pagear_panel_beton.png,Pagar Panel Beton Decorative,2024-07-12,2024-07-12
+61,17,panel_spesifikasi.jpg,Pagar Panel Beton Decorative,2024-07-12,2024-07-12
+62,17,panel_teknik.jpg,Pagar Panel Beton Decorative,2024-07-12,2024-07-12
+63,17,panel_ukuran.jpg,Pagar Panel Beton Decorative,2024-07-12,2024-07-12
+64,17,panel_pemasangan.jpg,Pagar Panel Beton Decorative,2024-07-12,2024-07-12
+65,18,092148-pagear_panel_beton_decorative.png,Concrete Barrier Precast,2024-07-12,2024-07-12
+66,18,panel-decorative_spesifikasi.jpg,Concrete Barrier Precast,2024-07-12,2024-07-12
+67,18,panel-decorative_teknik.jpg,Concrete Barrier Precast,2024-07-12,2024-07-12
+68,18,panel-decorative_ukuran.jpg,Concrete Barrier Precast,2024-07-12,2024-07-12
+69,19,092951-bariier.png,Concrete Barrier Precast,2024-07-12,2024-07-12
+70,19,barrier_spesifikasi.jpg,Concrete Barrier Precast,2024-07-12,2024-07-12
+71,19,barrier_teknik.jpg,Concrete Barrier Precast,2024-07-12,2024-07-12

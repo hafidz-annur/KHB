@@ -1,0 +1,317 @@
+{
+  "menu": [
+    {
+      "url": "/admin",
+      "name": "Dashboards",
+      "icon": "menu-icon tf-icons mdi mdi-home-outline",
+      "slug": "dashboard",
+      "badge": [
+        "danger",
+        "5"
+      ],
+      "submenu": [
+        {
+          "url": "/admin",
+          "name": "Analytics",
+          "slug": "dashboard-analytics"
+        }
+      ]
+    },
+    {
+      "name": "Layouts",
+      "icon": "menu-icon tf-icons mdi mdi-window-maximize",
+      "slug": "layouts",
+      "submenu": [
+        {
+          "url": "admin/layouts/without-menu",
+          "name": "Without menu",
+          "slug": "layouts-without-menu"
+        },
+        {
+          "url": "admin/layouts/without-navbar",
+          "name": "Without navbar",
+          "slug": "layouts-without-navbar"
+        },
+        {
+          "url": "admin/layouts/container",
+          "name": "Container",
+          "slug": "layouts-container"
+        },
+        {
+          "url": "admin/layouts/fluid",
+          "name": "Fluid",
+          "slug": "layouts-fluid"
+        },
+        {
+          "url": "admin/layouts/blank",
+          "name": "Blank",
+          "slug": "layouts-blank",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Apps & Pages"
+    },
+    {
+      "name": "Account Settings",
+      "icon": "menu-icon tf-icons mdi mdi-account-outline",
+      "slug": "pages-account-settings",
+      "submenu": [
+        {
+          "url": "admin/pages/account-settings-account",
+          "name": "Account",
+          "slug": "pages-account-settings-account"
+        },
+        {
+          "url": "admin/pages/account-settings-notifications",
+          "name": "Notifications",
+          "slug": "pages-account-settings-notifications"
+        },
+        {
+          "url": "admin/pages/account-settings-connections",
+          "name": "Connections",
+          "slug": "pages-account-settings-connections"
+        }
+      ]
+    },
+    {
+      "name": "Authentications",
+      "icon": "menu-icon tf-icons mdi mdi-lock-open-outline",
+      "slug": "auth",
+      "submenu": [
+        {
+          "url": "admin/auth/login-basic",
+          "name": "Login",
+          "slug": "auth-login-basic",
+          "target": "_blank"
+        },
+        {
+          "url": "admin/auth/register-basic",
+          "name": "Register",
+          "slug": "auth-register-basic",
+          "target": "_blank"
+        },
+        {
+          "url": "admin/auth/forgot-password-basic",
+          "name": "Forgot Password",
+          "slug": "auth-forgot-password-basic",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "icon": "menu-icon tf-icons mdi mdi-cube-outline",
+      "slug": "pages-misc",
+      "submenu": [
+        {
+          "url": "admin/pages/misc-error",
+          "name": "Error",
+          "slug": "pages-misc-error",
+          "target": "_blank"
+        },
+        {
+          "url": "admin/pages/misc-under-maintenance",
+          "name": "Under Maintenance",
+          "slug": "pages-misc-under-maintenance",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Components"
+    },
+    {
+      "name": "Cards",
+      "icon": "menu-icon tf-icons mdi mdi-credit-card-outline",
+      "slug": "cards-basic",
+      "url": "cards/basic"
+    },
+    {
+      "name": "User interface",
+      "icon": "menu-icon tf-icons mdi mdi-archive-outline",
+      "slug": "ui",
+      "submenu": [
+        {
+          "url": "admin/ui/accordion",
+          "name": "Accordion",
+          "slug": "ui-accordion"
+        },
+        {
+          "url": "admin/ui/alerts",
+          "name": "Alerts",
+          "slug": "ui-alerts"
+        },
+        {
+          "url": "admin/ui/badges",
+          "name": "Badges",
+          "slug": "ui-badges"
+        },
+        {
+          "url": "admin/ui/buttons",
+          "name": "Buttons",
+          "slug": "ui-buttons"
+        },
+        {
+          "url": "admin/ui/carousel",
+          "name": "Carousel",
+          "slug": "ui-carousel"
+        },
+        {
+          "url": "admin/ui/collapse",
+          "name": "Collapse",
+          "slug": "ui-collapse"
+        },
+        {
+          "url": "admin/ui/dropdowns",
+          "name": "Dropdowns",
+          "slug": "ui-dropdowns"
+        },
+        {
+          "url": "admin/ui/footer",
+          "name": "Footer",
+          "slug": "ui-footer"
+        },
+        {
+          "url": "admin/ui/list-groups",
+          "name": "List Groups",
+          "slug": "ui-list-groups"
+        },
+        {
+          "url": "admin/ui/modals",
+          "name": "Modals",
+          "slug": "ui-modals"
+        },
+        {
+          "url": "admin/ui/navbar",
+          "name": "Navbar",
+          "slug": "ui-navbar"
+        },
+        {
+          "url": "admin/ui/offcanvas",
+          "name": "Offcanvas",
+          "slug": "ui-offcanvas"
+        },
+        {
+          "url": "admin/ui/pagination-breadcrumbs",
+          "name": "Pagination & Breadcrumbs",
+          "slug": "ui-pagination-breadcrumbs"
+        },
+        {
+          "url": "admin/ui/progress",
+          "name": "Progress",
+          "slug": "ui-progress"
+        },
+        {
+          "url": "admin/ui/spinners",
+          "name": "Spinners",
+          "slug": "ui-spinners"
+        },
+        {
+          "url": "admin/ui/tabs-pills",
+          "name": "Tabs & Pills",
+          "slug": "ui-tabs-pills"
+        },
+        {
+          "url": "admin/ui/toasts",
+          "name": "Toasts",
+          "slug": "ui-toasts"
+        },
+        {
+          "url": "admin/ui/tooltips-popovers",
+          "name": "Tooltips & Popovers",
+          "slug": "ui-tooltips-popovers"
+        },
+        {
+          "url": "admin/ui/typography",
+          "name": "Typography",
+          "slug": "ui-typography"
+        }
+      ]
+    },
+    {
+      "name": "Extended UI",
+      "icon": "menu-icon tf-icons mdi mdi-star-outline",
+      "slug": "extended",
+      "submenu": [
+        {
+          "url": "admin/extended/ui-perfect-scrollbar",
+          "name": "Perfect scrollbar",
+          "slug": "extended-ui-perfect-scrollbar"
+        },
+        {
+          "url": "admin/extended/ui-text-divider",
+          "name": "Text Divider",
+          "slug": "extended-ui-text-divider"
+        }
+      ]
+    },
+    {
+      "url": "icons/icons-mdi",
+      "icon": "menu-icon tf-icons mdi mdi-google-circles-extended",
+      "name": "Icons",
+      "slug": "icons-mdi"
+    },
+    {
+      "menuHeader": "Forms & Tables"
+    },
+    {
+      "name": "Form Elements",
+      "icon": "menu-icon tf-icons mdi mdi-form-select",
+      "slug": "forms",
+      "submenu": [
+        {
+          "url": "admin/forms/basic-inputs",
+          "name": "Basic Inputs",
+          "slug": "forms-basic-inputs"
+        },
+        {
+          "url": "admin/forms/input-groups",
+          "name": "Input groups",
+          "slug": "forms-input-groups"
+        }
+      ]
+    },
+    {
+      "name": "Form Layouts",
+      "icon": "menu-icon tf-icons mdi mdi-cube-outline",
+      "slug": "form-layouts",
+      "submenu": [
+        {
+          "url": "admin/form/layouts-vertical",
+          "name": "Vertical Form",
+          "slug": "form-layouts-vertical"
+        },
+        {
+          "url": "admin/form/layouts-horizontal",
+          "name": "Horizontal Form",
+          "slug": "form-layouts-horizontal"
+        }
+      ]
+    },
+    {
+      "url": "admin/tables/basic",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "name": "Tables",
+      "slug": "tables-basic"
+    },
+    {
+      "menuHeader": "Misc"
+    },
+    {
+      "url": "https://github.com/themeselection/materio-bootstrap-html-laravel-admin-template-free/issues",
+      "icon": "menu-icon tf-icons mdi mdi-lifebuoy",
+      "name": "Support",
+      "slug": "support",
+      "target": "_blank"
+    },
+    {
+      "url": "https://themeselection.com/demo/materio-bootstrap-html-admin-template/documentation/laravel-introduction.html",
+      "icon": "menu-icon tf-icons mdi mdi-file-document-multiple-outline",
+      "name": "Documentation",
+      "slug": "documentation",
+      "target": "_blank"
+    }
+  ]
+}

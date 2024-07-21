@@ -1,0 +1,69 @@
+{
+    "menu": [
+        {
+            "url": "admin",
+            "name": "Dashboard",
+            "icon": "menu-icon tf-icons mdi mdi-home-outline",
+            "slug": "dashboard"
+        },
+        {
+            "url": "admin/banner",
+            "name": "Banner",
+            "icon": "menu-icon tf-icons mdi mdi-image-outline",
+            "slug": "banner"
+        },
+        {
+            "name": "Produk",
+            "icon": "menu-icon tf-icons mdi mdi-cube",
+            "slug": "produk",
+            "submenu": [
+                {
+                    "url": "admin/kategori/produk",
+                    "name": "Kategori Produk",
+                    "slug": "kategori-produk"
+                },
+                {
+                    "url": "admin/produk/",
+                    "name": "Produk",
+                    "slug": "produk.index"
+                }
+            ]
+        },
+        {
+            "url": "admin/artikel",
+            "name": "Artikel",
+            "icon": "menu-icon tf-icons mdi mdi-post-outline",
+            "slug": "artikel"
+        },
+        {
+            "url": "admin/portofolio",
+            "name": "Portofolio",
+            "icon": "menu-icon tf-icons mdi mdi-tag-check-outline",
+            "slug": "portofolio"
+        },
+        {
+            "url": "admin/galeri",
+            "name": "Galeri",
+            "icon": "menu-icon tf-icons mdi mdi-view-gallery-outline",
+            "slug": "galeri"
+        },
+        {
+            "url": "admin/klien",
+            "name": "Klien",
+            "icon": "menu-icon tf-icons mdi mdi-account-outline",
+            "slug": "klien"
+        },
+        {
+            "url": "admin/sertifikasi",
+            "name": "Sertifikasi",
+            "icon": "menu-icon tf-icons mdi mdi-certificate-outline",
+            "slug": "sertifikasi"
+        },
+        {
+            "url": "admin/kontak",
+            "name": "Kontak",
+            "icon": "menu-icon tf-icons mdi mdi-message-outline",
+            "slug": "admin-kontak"
+        }
+    ]
+}
