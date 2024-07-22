@@ -19,7 +19,7 @@
                 <i class="mdi mdi-certificate me-2"></i>
                 Sertifikasi
             </h5>
-            <button class="btn btn-sm btn-light py-1 px-2" data-bs-toggle="modal" data-bs-target="#clientModal">
+            <button class="btn btn-sm btn-light py-1 px-2 step-1" data-bs-toggle="modal" data-bs-target="#clientModal">
                 <i class="mdi mdi-plus me-2"></i>
                 Tambah
             </button>
@@ -44,7 +44,7 @@
                             </div>
 
                             {{-- Setting --}}
-                            <div class="dropdown position-absolute" style="top:5px; right:5px;">
+                            <div class="dropdown position-absolute step-2" style="top:5px; right:5px;">
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                     data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical text-primary"></i></button>
 
@@ -111,6 +111,10 @@
         </div>
     </div>
 
+@endsection
+
+
+@push('script-page')
     <script>
         function previewImage(input) {
             if (input.files && input.files[0]) {
@@ -125,4 +129,36 @@
             }
         }
     </script>
-@endsection
+    <script>
+        // Cek apakah panduan sudah dilihat di session storage
+        if (!sessionStorage.getItem('sertifikasi-intro')) {
+            // Membuat instance IntroJs
+            var intro = introJs();
+            // Menentukan langkah-langkah panduan
+            intro.setOptions({
+                steps: [{
+                        title: 'Menambahkan Sertifikasi',
+                        element: document.querySelector('.step-1'),
+                        intro: "Klik tombol ini untuk menambahkan sertifikasi baru, lengkapi data berdasarkan bidang yang ada di formulir.",
+                        position: 'left'
+                    },
+                    {
+                        title: 'Daftar Aksi',
+                        element: document.querySelector('.step-2'),
+                        intro: "Anda dapat meng-aktifkan/non-aktifkan dan menghapus sertifikasi yang terdapat di daftar sertifikasi.",
+                        position: 'left'
+                    },
+                ]
+            });
+
+            // Memulai panduan
+            intro.start();
+
+            // Setelah panduan selesai, tandai di session storage
+            // intro.oncomplete(function() {
+            //     sessionStorage.setItem('sertifikasi-intro', 'true');
+            // });
+
+        }
+    </script>
+@endpush

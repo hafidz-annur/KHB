@@ -19,6 +19,12 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.js"
+    integrity="sha512-f26fxKZJiF0AjutUaQHNJ5KnXSisqyUQ3oyfaoen2apB1wLa5ccW3lmtaRe2jdP5kh4LF2gAHP9xQbx7wYhU5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+@stack('script-page')
 <script>
     // Start DataTable 
     let table = new DataTable('.datatables', {

@@ -33,7 +33,7 @@ class LoginBasic extends Controller
       // Jika berhasil login
       $request->session()->regenerate();
 
-      return redirect()->intended('/admin');
+      return redirect()->intended('/admin')->with('success', 'Selamat anda berhasil masuk!');
     }
 
     // Jika gagal login
@@ -51,7 +51,7 @@ class LoginBasic extends Controller
 
     $request->session()->regenerateToken();
 
-    return redirect('/admin/auth/login');
+    return redirect('/admin/auth/login')->with('success', 'Selamat anda berhasil logout!');
   }
 
 

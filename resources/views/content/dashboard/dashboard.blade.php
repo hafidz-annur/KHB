@@ -6,9 +6,9 @@
     <div class="row">
         <div class="row">
             <div class="col-md-7">
-                <div class="row g-3">
+                <div class="row g-3 step-1">
                     <div class="col-md-4 col-6">
-                        <div class="card h-100">
+                        <div class="card h-100 step-1">
                             <div class="card-header pb-0 d-flex justify-content-between align-items-center mb-3">
                                 <div
                                     class="mdi mdi-cube mdi-24px text-white bg-primary rounded rounded-circle p-2 d-inline-block">
@@ -111,6 +111,8 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="row step-2 my-3">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header py-2 fw-bold">
@@ -149,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 step-3">
                 <div class="card">
                     <div class="card-header py-2 fw-bold">
                         <i class="mdi mdi-message-outline me-2"></i>
@@ -185,6 +187,56 @@
                 </div>
             </div>
         </div>
-
     </div>
 @endsection
+
+@push('script-page')
+    <script>
+        // Cek apakah panduan sudah dilihat di session storage
+        if (!sessionStorage.getItem('home-intro')) {
+            // Membuat instance IntroJs
+            var intro = introJs();
+            // Menentukan langkah-langkah panduan
+            intro.setOptions({
+                steps: [{
+                        title: 'Selamat Datang',
+                        intro: "Ini adalah area admin, disini anda bisa menambahkan, mengedit dan menghapus konten website KH Beton",
+                        position: 'bottom'
+                    },
+                    {
+                        title: 'Total Record',
+                        element: document.querySelector('.step-1'),
+                        intro: "Ini adalah total record aktif disetiap fitur.",
+                        position: 'bottom'
+                    },
+                    {
+                        title: 'Kontak Terakhir',
+                        element: document.querySelector('.step-2'),
+                        intro: "Anda dapat melihat 5 kontak terbaru dari klien.",
+                        position: 'top'
+                    },
+                    {
+                        title: 'Artikel Terakhir',
+                        element: document.querySelector('.step-3'),
+                        intro: "Terakhir, ini adalah 5 artikel terbaru yang sudah anda publish.",
+                        position: 'left'
+                    },
+                    {
+                        title: 'Pengaturan Akun',
+                        element: document.querySelector('.step-akun'),
+                        intro: "Klik tombol ini untuk memperbahaarui data profil KH Beton, mengganti password dan keluar dari dashboard admin.",
+                        position: 'left'
+                    }
+                ]
+            });
+
+            // Memulai panduan
+            intro.start();
+
+            // Setelah panduan selesai, tandai di session storage
+            // intro.oncomplete(function() {
+            //     sessionStorage.setItem('home-intro', 'true');
+            // });
+        }
+    </script>
+@endpush

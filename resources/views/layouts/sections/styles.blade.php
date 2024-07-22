@@ -19,6 +19,11 @@
 <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.0/ckeditor5.css">
 <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
+<!-- Tambahkan Intro.js melalui CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.css"
+    integrity="sha512-4OzqLjfh1aJa7M33b5+h0CSx0Q3i9Qaxlrr1T/Z+Vz+9zs5A7GM3T3MFKXoreghi3iDOSbkPMXiMBhFO7UBW/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <style>
     div.dt-container .dt-paging .dt-paging-button {
@@ -50,6 +55,22 @@
         border-radius: 20px;
 
         /* Sesuaikan radius sesuai kebutuhan */
+    }
+
+    .introjs-tooltip {
+        background: rgba(255, 255, 255, 0.919) !important;
+        border-radius: 10px !important;
+        color: black !important;
+    }
+
+    .introjs-button {
+        border-radius: 20px !important;
+        padding: 5px 20px !important;
+    }
+
+    .introjs-overlay {
+        background: black !important;
+        opacity: .6 !important;
     }
 </style>
 

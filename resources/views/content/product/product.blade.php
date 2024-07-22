@@ -9,7 +9,7 @@
                 <i class="mdi mdi-cube me-2"></i>
                 Produk
             </h5>
-            <a href="{{ route('produk.create') }}" class="btn btn-sm btn-light py-1 px-2">
+            <a href="{{ route('produk.create') }}" class="btn btn-sm btn-light py-1 px-2 step-1">
                 <i class="mdi mdi-plus me-2"></i>
                 Tambah
             </a>
@@ -59,7 +59,7 @@
                                 @endif
                             </td>
                             <td class="text-end">
-                                <div class="dropdown">
+                                <div class="dropdown step-2">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                         data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>
                                     <div class="dropdown-menu">
@@ -165,7 +165,10 @@
             </div>
         </div>
     </div>
+@endsection
 
+
+@push('script-page')
     <script>
         function editData(url) {
             $.ajax({
@@ -191,4 +194,37 @@
             });
         }
     </script>
-@endsection
+
+    <script>
+        // Cek apakah panduan sudah dilihat di session storage
+        if (!sessionStorage.getItem('produk-intro')) {
+            // Membuat instance IntroJs
+            var intro = introJs();
+            // Menentukan langkah-langkah panduan
+            intro.setOptions({
+                steps: [{
+                        title: 'Menambahkan Produk',
+                        element: document.querySelector('.step-1'),
+                        intro: "Klik tombol ini untuk menambahkan produk baru, lengkapi data berdasarkan bidang yang ada di formulir.",
+                        position: 'left'
+                    },
+                    {
+                        title: 'Daftar Aksi',
+                        element: document.querySelector('.step-2'),
+                        intro: "Anda dapat meng-aktifkan/non-aktifkan, melihat detail, mengedit dan menghapus produk yang terdapat di daftar produk.",
+                        position: 'left'
+                    },
+                ]
+            });
+
+            // Memulai panduan
+            intro.start();
+
+            // Setelah panduan selesai, tandai di session storage
+            // intro.oncomplete(function() {
+            //     sessionStorage.setItem('produk-intro', 'true');
+            // });
+
+        }
+    </script>
+@endpush

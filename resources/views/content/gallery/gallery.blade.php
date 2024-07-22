@@ -9,7 +9,7 @@
                 <i class="mdi mdi-view-gallery me-2"></i>
                 Galeri
             </h5>
-            <button class="btn btn-sm btn-light py-1 px-2" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            <button class="btn btn-sm btn-light py-1 px-2 step-1" data-bs-toggle="modal" data-bs-target="#galleryModal"
                 onclick="resetForm()">
                 <i class="mdi mdi-plus me-2"></i>
                 Tambah
@@ -52,7 +52,7 @@
                                 @endif
                             </td>
                             <td class="text-end">
-                                <div class="dropdown">
+                                <div class="dropdown step-2">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                         data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>
                                     <div class="dropdown-menu">
@@ -82,3 +82,39 @@
 
     @include('content.gallery.gallery-add')
 @endsection
+
+
+@push('script-page')
+    <script>
+        // Cek apakah panduan sudah dilihat di session storage
+        if (!sessionStorage.getItem('galeri-intro')) {
+            // Membuat instance IntroJs
+            var intro = introJs();
+            // Menentukan langkah-langkah panduan
+            intro.setOptions({
+                steps: [{
+                        title: 'Menambahkan Galeri',
+                        element: document.querySelector('.step-1'),
+                        intro: "Klik tombol ini untuk menambahkan galeri baru, lengkapi data berdasarkan bidang yang ada di formulir.",
+                        position: 'left'
+                    },
+                    {
+                        title: 'Daftar Aksi',
+                        element: document.querySelector('.step-2'),
+                        intro: "Anda dapat meng-aktifkan/non-aktifkan, mengedit dan menghapus galeri yang terdapat di daftar galeri.",
+                        position: 'left'
+                    },
+                ]
+            });
+
+            // Memulai panduan
+            intro.start();
+
+            // Setelah panduan selesai, tandai di session storage
+            // intro.oncomplete(function() {
+            //     sessionStorage.setItem('galeri-intro', 'true');
+            // });
+
+        }
+    </script>
+@endpush

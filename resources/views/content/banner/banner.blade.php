@@ -16,7 +16,7 @@
                 <i class="mdi mdi-image-outline me-2"></i>
                 Banner
             </h5>
-            <button class="btn btn-sm btn-light py-1 px-2" data-bs-toggle="modal" data-bs-target="#bannerModal"
+            <button class="btn btn-sm btn-light py-1 px-2 step-1" data-bs-toggle="modal" data-bs-target="#bannerModal"
                 onclick="resetForm()">
                 <i class="mdi mdi-plus me-2"></i>
                 Tambah
@@ -59,7 +59,7 @@
                                 @endif
                             </td>
                             <td class="text-end">
-                                <div class="dropdown">
+                                <div class="dropdown step-2">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                         data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>
                                     <div class="dropdown-menu">
@@ -89,3 +89,38 @@
 
     @include('content.banner.banner-add')
 @endsection
+
+@push('script-page')
+    <script>
+        // Cek apakah panduan sudah dilihat di session storage
+        if (!sessionStorage.getItem('banner-intro')) {
+            // Membuat instance IntroJs
+            var intro = introJs();
+            // Menentukan langkah-langkah panduan
+            intro.setOptions({
+                steps: [{
+                        title: 'Menambahkan Banner',
+                        element: document.querySelector('.step-1'),
+                        intro: "Klik tombol ini untuk menambahkan banner baru, lengkapi data berdasarkan bidang yang ada di formulir.",
+                        position: 'left'
+                    },
+                    {
+                        title: 'Daftar Aksi',
+                        element: document.querySelector('.step-2'),
+                        intro: "Anda dapat meng-aktifkan/non-aktifkan, mengedit dan menghapus banner yang terdapat di daftar banner.",
+                        position: 'left'
+                    },
+                ]
+            });
+
+            // Memulai panduan
+            intro.start();
+
+            // Setelah panduan selesai, tandai di session storage
+            // intro.oncomplete(function() {
+            //     sessionStorage.setItem('banner-intro', 'true');
+            // });
+
+        }
+    </script>
+@endpush
