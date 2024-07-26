@@ -1,5 +1,12 @@
 @extends('layouts_user.main')
-
+@section('title', 'Kontak Kami | KH BETON')
+@section('meta')
+    <meta name="description"
+        content="KH Beton - High Performance Concrete, Upgrade Your Profit With Quality, High Performance Concrete" />
+    <meta name="keywords"
+        content="kansteen solo, kansteen boyolali, pagar panel solo, pagar panel boyolali, saluran drainase boyolali, u-ditch boyolali, u-ditch solo, box culvert boyolali, box culvert solo, ready mix, wet mix, dry mix, ready mix boyolali, precast, precast boyolali, precast solo, precast jawa tengah, beton jawa tengah, paving jawa tengah, paving boyolali, paving solo, beton boyolali, u-ditch, box culvert, paving, barrier, boyolali,pagar panel, solo, surakarta, industri, manufaktur, khbeton, high, performance, concrete, upgrade, your, profit, with, quality, precast, wetcast, drycast, mutu, k-350, k-700, durability" />
+    <meta name="author" content="KH Beton" />
+@endsection
 @section('banner')
     <style>
         div>p {
@@ -24,22 +31,38 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-md-7 order-md-0 order-1">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.423238257731!2d110.56237567476306!3d-7.528730192484346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a6f93c89173f9%3A0x9af447f6fd046667!2sKH%20Beton%20Office%20(Precast%20Concrete%20%26%20Ready%20Mix)!5e0!3m2!1sen!2sid!4v1720705689613!5m2!1sen!2sid"
-                    width="100%" height="530" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="rounded shadow"></iframe>
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        @foreach ($location as $key => $item)
+                            <button class="nav-link {{ $key == '0' ? 'active' : '' }}" id="nav-home-tab-{{ $item->id }}"
+                                data-bs-toggle="tab" data-bs-target="#nav-home-{{ $item->id }}" type="button"
+                                role="tab" aria-controls="nav-home" aria-selected="true">
+                                Alamat {{ $key + 1 }}
+                            </button>
+                        @endforeach
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    @foreach ($location as $key => $item)
+                        <div class="tab-pane fade {{ $key == '0' ? 'show active' : '' }}" id="nav-home-{{ $item->id }}"
+                            role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                            {!! $item->google_maps_link !!}
+                        </div>
+                    @endforeach
+                </div>
 
                 <div class="card border-0 shadow mt-3 bg-dark text-white">
                     <div class="card-body">
-                        <div class="row row-cols-md-3 row-cols-1">
-                            <div class="col text-md-start text-center">
+                        <div class="row">
+                            <div class="col-md-6 text-md-start text-center">
                                 <i class="fas fa-envelope me-2"></i> {{ $profile->email }}
                             </div>
-                            <div class="col text-center">
+                            <div class="col-md-3 text-center">
                                 <i class="fas fa-phone me-2"></i>
                                 {{ $profile->wa_number_1 }}
                             </div>
-                            <div class="col text-md-end text-center">
+                            <div class="col-md-3 text-md-end text-center">
                                 <i class="fas fa-phone me-2"></i>
                                 {{ $profile->wa_number_2 }}
                             </div>

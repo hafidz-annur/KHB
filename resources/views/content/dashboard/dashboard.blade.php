@@ -7,6 +7,38 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="row g-3 step-1">
+                    <div class="col-12">
+                        <div class="card">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">Pengunjung Hari Ini</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                        aria-controls="profile-tab-pane" aria-selected="false">Total Pengunjung</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                    aria-labelledby="home-tab" tabindex="0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        Jumlah Pengunjung Hari Ini
+                                        <span class="badge bg-primary py-2 px-3">{{ $visitor['today'] }}</span>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                    aria-labelledby="profile-tab" tabindex="0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        Total Pengunjung Keseluruhan
+                                        <span class="badge bg-primary py-2 px-3">{{ $visitor['total'] }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4 col-6">
                         <div class="card h-100 step-1">
                             <div class="card-header pb-0 d-flex justify-content-between align-items-center mb-3">
@@ -224,7 +256,7 @@
                     {
                         title: 'Pengaturan Akun',
                         element: document.querySelector('.step-akun'),
-                        intro: "Klik tombol ini untuk memperbahaarui data profil KH Beton, mengganti password dan keluar dari dashboard admin.",
+                        intro: "Klik tombol ini untuk memperbaharui profil KH Beton, mengganti password dan keluar dari dashboard admin.",
                         position: 'left'
                     }
                 ]
@@ -234,9 +266,9 @@
             intro.start();
 
             // Setelah panduan selesai, tandai di session storage
-            // intro.oncomplete(function() {
-            //     sessionStorage.setItem('home-intro', 'true');
-            // });
+            intro.oncomplete(function() {
+                sessionStorage.setItem('home-intro', true);
+            });
         }
     </script>
 @endpush

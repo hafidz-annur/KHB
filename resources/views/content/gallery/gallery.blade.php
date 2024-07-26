@@ -111,9 +111,9 @@
             intro.start();
 
             // Setelah panduan selesai, tandai di session storage
-            // intro.oncomplete(function() {
-            //     sessionStorage.setItem('galeri-intro', 'true');
-            // });
+            intro.oncomplete(function() {
+                sessionStorage.setItem('galeri-intro', 'true');
+            });
 
         }
     </script>

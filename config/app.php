@@ -170,6 +170,8 @@ return [
       App\Providers\RouteServiceProvider::class,
       App\Providers\MenuServiceProvider::class,
       App\Providers\ProfileServiceProvider::class,
+      App\Providers\VisitorServiceProvider::class,
+      App\Providers\LocationServiceProvider::class,
     ])
     ->toArray(),
 

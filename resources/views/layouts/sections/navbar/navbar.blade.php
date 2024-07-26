@@ -42,7 +42,7 @@
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
     <!-- Navbar Title -->
     <h3 class="m-0">
-        Selamat Datang di Website {{ $profile->title }} 🎉🎉
+        Selamat Datang {{ Auth::user()->name }} 🎉🎉
     </h3>
     <!-- /Search -->
     <ul class="navbar-nav flex-row align-items-center ms-auto">

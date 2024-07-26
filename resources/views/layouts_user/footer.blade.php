@@ -7,9 +7,11 @@
                     <img src="{{ asset('uploaded_files/logo/' . $profile->logo_white) }}" alt="{{ $profile->title }}"
                         class="w-75">
                     <p class="fw-bold my-4 lh-base">{{ $profile->tagline }}</p>
-                    <div class="lh-base m-0">
-                        {!! $profile->location !!}
-                    </div>
+                    @foreach ($location as $item)
+                        <div class="lh-base m-0 mb-3">
+                            {!! $item->address !!}
+                        </div>
+                    @endforeach
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x text-white me-2"></i>
 
@@ -61,10 +63,16 @@
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Informasi Kontak</h4>
                     <a href=""><i class="fas fa-envelope me-2"></i> {{ $profile->email }}</a>
-                    <a href=""><i class="fas fa-phone me-2"></i> {{ $profile->office_number }} </a>
+                    @foreach ($location as $item)
+                        <a href=""><i class="fas fa-phone me-2"></i> {{ $item->phone }} </a>
+                    @endforeach
                     <a href=""><i class="fas fa-phone me-2"></i> {{ $profile->wa_number_1 }} </a>
                     <a href=""><i class="fas fa-phone me-2"></i> {{ $profile->wa_number_2 }} </a>
                 </div>
+                Jumlah Pengunjung:
+                <span class="badge bg-danger fw-bold px-3">
+                    {{ $visitor['total'] }}
+                </span>
             </div>
         </div>
     </div>

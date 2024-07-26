@@ -19,7 +19,7 @@
                 class="nav-item nav-link {{ request()->is('tentang-kami') ? 'active' : '' }}">Tentang Kami</a>
         </div>
         <a href="/kontak-kami"
-            class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Kontak
+            class="btn btn-primary rounded-pill text-white mt-md-0 mt-3 py-2 px-4 flex-wrap flex-sm-shrink-0">Kontak
             Kami</a>
     </div>
 </nav>

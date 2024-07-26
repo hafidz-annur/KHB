@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use App\Mail\ThanksMail;
 use App\Models\Contact;
+use App\Models\Location;
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class ContactController extends Controller
   function index()
   {
     $product = Product::all();
-    return view('user.contact', compact('product'));
+    $location = Location::all();
+    return view('user.contact', compact('product', 'location'));
   }
 
   function store(Request $request)

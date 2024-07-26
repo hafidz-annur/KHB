@@ -1,12 +1,10 @@
 <head>
     <meta charset="utf-8">
-    <title>KH BETON - Upgrade Your Profit With Quality</title>
+    <title>
+        @yield('title')
+    </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description"
-        content="KH Beton - High Performance Concrete, Upgrade Your Profit With Quality, High Performance Concrete" />
-    <meta name="keywords"
-        content="kansteen solo, kansteen boyolali, pagar panel solo, pagar panel boyolali, saluran drainase boyolali, u-ditch boyolali, u-ditch solo, box culvert boyolali, box culvert solo, ready mix, wet mix, dry mix, ready mix boyolali, precast, precast boyolali, precast solo, precast jawa tengah, beton jawa tengah, paving jawa tengah, paving boyolali, paving solo, beton boyolali, u-ditch, box culvert, paving, barrier, boyolali,pagar panel, solo, surakarta, industri, manufaktur, khbeton, high, performance, concrete, upgrade, your, profit, with, quality, precast, wetcast, drycast, mutu, k-350, k-700, durability" />
-    <meta name="author" content="KH Beton" />
+    @yield('meta')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131199306-1"></script>
@@ -63,6 +61,40 @@
 
         div p {
             line-height: 1.25 !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar {
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 99999
+            }
+
+            #navbarCollapse {
+                position: fixed !important;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                height: 100vh !important;
+                padding: 30px;
+                background: white !important;
+            }
+
+            .nav-item.nav-link {
+                background: #e1ecf4;
+                padding: 10px 20px !important;
+                margin-right: 0 !important;
+                border-radius: 0px;
+                border-bottom: 1px solid #dedede;
+                margin-bottom: 5px;
+            }
+
+            .nav-item.nav-link.active {
+                background: #117EC2;
+                color: white !important;
+            }
         }
     </style>
     @yield('style')

@@ -95,9 +95,9 @@
             intro.start();
 
             // Setelah panduan selesai, tandai di session storage
-            // intro.oncomplete(function() {
-            //     sessionStorage.setItem('kategori-intro', 'true');
-            // });
+            intro.oncomplete(function() {
+                sessionStorage.setItem('kategori-intro', 'true');
+            });
 
         }
     </script>

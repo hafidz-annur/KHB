@@ -45,11 +45,14 @@
         ClassicEditor
             .create(element, {
                 toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
-                    'blockQuote'
+                    'blockQuote', 'embed', 'insertTable', 'mediaEmbed'
                 ],
+                mediaEmbed: {
+                    previewsInData: true
+                }
             })
             .then(editor => {
-                console.log('Editor was initialized', editor);
+                // console.log('Editor was initialized', editor);
                 myEditor = editor;
             })
             .catch(error => {
@@ -115,6 +118,37 @@
         })
     }
     // End Sweetalert
+
+
+    // Fungsi untuk mengubah semua <oembed> menjadi <iframe>
+    function convertAllOembedToIframe() {
+        // Mendapatkan semua elemen <oembed> di dalam elemen <figure> dengan kelas 'media'
+        var oembedElements = document.querySelectorAll('figure.media oembed');
+
+        // Iterasi melalui semua elemen <oembed>
+        oembedElements.forEach(function(oembedElement) {
+            // Mendapatkan URL dari atribut 'url'
+            var url = oembedElement.getAttribute('url');
+
+            // Membuat elemen <iframe>
+            var iframeElement = document.createElement('iframe');
+
+            // Mengatur atribut untuk <iframe>
+            iframeElement.setAttribute('src', url);
+            iframeElement.setAttribute('width', '100%');
+            iframeElement.setAttribute('height', '250');
+            iframeElement.setAttribute('style', 'border:0;');
+            iframeElement.setAttribute('allowfullscreen', '');
+            iframeElement.setAttribute('loading', 'lazy');
+            iframeElement.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+
+            // Mengganti <oembed> dengan <iframe>
+            oembedElement.parentNode.replaceChild(iframeElement, oembedElement);
+        });
+    }
+
+    // Memanggil fungsi setelah halaman dimuat
+    window.onload = convertAllOembedToIframe;
 </script>
 
 {{-- Notification by Session  --}}

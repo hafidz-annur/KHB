@@ -1,5 +1,12 @@
 @extends('layouts_user.main')
-
+@section('title', 'Produk | KH BETON')
+@section('meta')
+    <meta name="description"
+        content="KH Beton - High Performance Concrete, Upgrade Your Profit With Quality, High Performance Concrete" />
+    <meta name="keywords"
+        content="kansteen solo, kansteen boyolali, pagar panel solo, pagar panel boyolali, saluran drainase boyolali, u-ditch boyolali, u-ditch solo, box culvert boyolali, box culvert solo, ready mix, wet mix, dry mix, ready mix boyolali, precast, precast boyolali, precast solo, precast jawa tengah, beton jawa tengah, paving jawa tengah, paving boyolali, paving solo, beton boyolali, u-ditch, box culvert, paving, barrier, boyolali,pagar panel, solo, surakarta, industri, manufaktur, khbeton, high, performance, concrete, upgrade, your, profit, with, quality, precast, wetcast, drycast, mutu, k-350, k-700, durability" />
+    <meta name="author" content="KH Beton" />
+@endsection
 @section('banner')
     <!-- Header Start -->
     <img loading="lazy" src="{{ asset('assets/img/KH_Beton/portofolio/1.jpg') }}" alt="Produk KH Beton" class="banner">

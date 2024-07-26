@@ -110,6 +110,9 @@ Route::middleware(['auth'])->group(function () {
     'update' => 'profil.update',
   ]);
 
+  Route::post('profil/lokasi', [ProfileController::class, 'store_location'])->name('admin-lokasi');
+  Route::delete('profil/lokasi/{id}', [ProfileController::class, 'delete_location'])->name('admin-lokasi-delete');
+
   Route::get('kontak', [ContactController::class, 'index'])->name('admin-kontak');
 
   Route::get('/auth/logout', [LoginBasic::class, 'logout']);

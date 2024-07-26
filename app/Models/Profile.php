@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
+use Coderflex\Laravisit\Concerns\CanVisit;
+use Coderflex\Laravisit\Concerns\HasVisits;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Profile extends Model implements CanVisit
 {
   use HasFactory;
+  use HasVisits;
+
   protected $table = 'profile';
 
   protected $fillable = [

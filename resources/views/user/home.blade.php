@@ -1,5 +1,14 @@
 @extends('layouts_user.main')
 
+@section('title', 'KH BETON - Upgrade Your Profit With Quality')
+@section('meta')
+    <meta name="description"
+        content="KH Beton - High Performance Concrete, Upgrade Your Profit With Quality, High Performance Concrete" />
+    <meta name="keywords"
+        content="kansteen solo, kansteen boyolali, pagar panel solo, pagar panel boyolali, saluran drainase boyolali, u-ditch boyolali, u-ditch solo, box culvert boyolali, box culvert solo, ready mix, wet mix, dry mix, ready mix boyolali, precast, precast boyolali, precast solo, precast jawa tengah, beton jawa tengah, paving jawa tengah, paving boyolali, paving solo, beton boyolali, u-ditch, box culvert, paving, barrier, boyolali,pagar panel, solo, surakarta, industri, manufaktur, khbeton, high, performance, concrete, upgrade, your, profit, with, quality, precast, wetcast, drycast, mutu, k-350, k-700, durability" />
+    <meta name="author" content="KH Beton" />
+@endsection
+
 @section('banner')
     <!-- Carousel Start -->
     <div class="header-carousel owl-carousel bg-primary">
@@ -174,30 +183,28 @@
                 <h1 class="display-6 mb-4">Kualitas Terbaik untuk Anda</h1>
             </div>
 
-            <section class="splide" id="product">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        @foreach ($categories as $item)
-                            <li class="splide__slide wow fadeInUp" data-wow-delay="0.1s">
-                                <a href="{{ url('produk?category=' . $item->id) }}">
-                                    <div class="card position-relative overflow-hidden category-card"
-                                        style="height: 250px">
-                                        <img loading="lazy"
-                                            src="{{ asset('uploaded_files/category/' . $item->thumbnail) }}"
-                                            alt="{{ $item->alt }}" class="w-100 rounded shadow"
-                                            style="object-fit: cover">
-                                        <div class="position-absolute text-center py-4 category-title">
-                                            <h5 class=" fw-bold text-white text-uppercase mb-0">{{ $item->name }}
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </section>
         </div>
+        <section class="splide" id="product" style="padding: 0 60px">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    @foreach ($categories as $item)
+                        <li class="splide__slide wow fadeInUp" data-wow-delay="0.1s">
+                            <a href="{{ url('produk?category=' . $item->id) }}">
+                                <div class="card position-relative overflow-hidden category-card" style="height: 250px">
+                                    <img loading="lazy" src="{{ asset('uploaded_files/category/' . $item->thumbnail) }}"
+                                        alt="{{ $item->alt }}" class="w-100 rounded shadow"
+                                        style="object-fit: cover">
+                                    <div class="position-absolute text-center py-4 category-title">
+                                        <h5 class=" fw-bold text-white text-uppercase mb-0">{{ $item->name }}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </section>
     </div>
     <!-- Product End -->
 
@@ -326,6 +333,8 @@
     </div>
     <!-- Blog End -->
 
+    @include('layouts_user.cta')
+
     {{-- Certificate Start  --}}
     <div class="container-fluid blog py-5 wow fadeInUp" data-wow-delay="0.3s">
         <div class="container py-5">
@@ -344,7 +353,7 @@
                             <div class="col text-center py-2">
                                 <img loading="lazy" src="{{ asset('uploaded_files/certificate/' . $item->image) }}"
                                     class="img-fluid w-100 rounded" alt="{{ $item->alt }}"
-                                    style="height: 40px; object-fit:contain">
+                                    style="height: 60px; object-fit:contain">
                             </div>
                         @endforeach
                     </div>
@@ -354,7 +363,7 @@
     </div>
     {{-- Certificate End  --}}
 
-    @include('layouts_user.cta')
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -373,10 +382,10 @@
                 breakpoints: {
                     640: {
                         perPage: 1,
-                        gap: 10,
+                        gap: 5,
                         padding: {
-                            left: 20,
-                            right: 20
+                            left: 5,
+                            right: 5
                         }
                     },
                 }

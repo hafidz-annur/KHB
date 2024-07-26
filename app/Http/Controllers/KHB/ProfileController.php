@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\KHB;
 
 use App\Http\Controllers\Controller;
+use App\Models\Location;
 use App\Models\Profile;
 use Exception;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class ProfileController extends Controller
   public function index()
   {
     $profile = Profile::first();
-    return view('content.profile.profile', compact('profile'));
+    $location = Location::all();
+    return view('content.profile.profile', compact('profile', 'location'));
   }
 
   /**
@@ -31,8 +33,8 @@ class ProfileController extends Controller
         'title' => 'required|string',
         'tagline' => 'required|string',
         'email' => 'required|email',
-        'office_number' => 'required|string',
-        'location' => 'required|string',
+        // 'office_number' => 'required|string',
+        // 'location' => 'required|string',
         'wa_number_1' => 'nullable|string',
         'wa_number_2' => 'nullable|string',
         'instagram_account' => 'nullable|string',
@@ -77,5 +79,35 @@ class ProfileController extends Controller
         ->withInput()
         ->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
     }
+  }
+
+  function store_location(Request $request)
+  {
+    try {
+      $validatedData =  $request->validate([
+        'address' => 'required|string|max:255',
+        'phone' => 'required|string|max:20',
+        'google_maps_link' => 'nullable|string',
+      ]);
+
+      $location = Location::create($validatedData);
+
+      return redirect()
+        ->to('/admin/profil')
+        ->with('success', 'Alamat berhasil ditambahkan');
+    } catch (Exception $e) {
+      return redirect()
+        ->back()
+        ->withInput()
+        ->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+    }
+  }
+
+  function delete_location($id)
+  {
+    $location = Location::findOrFail($id);
+    $location->delete();
+
+    return response()->json(null, 204);
   }
 }

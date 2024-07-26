@@ -21,14 +21,15 @@
             </h5>
         </div>
         <div class="card-body">
-            <form action="{{ url('admin/profil/' . $profile->id) }}" method="POST" enctype="multipart/form-data"
-                class="mt-3">
-                @csrf
-                @method('put')
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="row row-cols-md-2 row-cols-1">
-                            <div class="col">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="{{ url('admin/profil/' . $profile->id) }}" method="POST" enctype="multipart/form-data"
+                        class="mt-3">
+                        @csrf
+                        @method('put')
+                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <img id="prevLogoColor" class="preview shadow"
                                         src="{{ asset('uploaded_files/logo/' . $profile->logo_color) }}" alt="Preview">
@@ -42,7 +43,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <img id="prevLogoWhite" class="preview shadow bg-dark"
                                         src="{{ asset('uploaded_files/logo/' . $profile->logo_white) }}" alt="Preview">
@@ -56,7 +57,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="title" name="title"
+                                        placeholder="Title" value="{{ $profile->title }}" required>
+                                    <label for="title">Nama Website</label>
+                                </div>
 
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="tagline" name="tagline"
+                                        placeholder="Tagline" value="{{ $profile->tagline }}" required>
+                                    <label for="tagline">Tagline</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Email" value="{{ $profile->email }}" required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-md-2 row-cols-1">
                             <div class="col">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="wa_number_1" name="wa_number_1"
@@ -91,57 +113,32 @@
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="facebook_account" name="facebook_account"
-                                        placeholder="Akun Facebook" value="{{ $profile->facebook_account }}">
+                                    <input type="text" class="form-control" id="facebook_account"
+                                        name="facebook_account" placeholder="Akun Facebook"
+                                        value="{{ $profile->facebook_account }}">
                                     <label for="facebook_account">Akun Facebook</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="linkedin_account" name="linkedin_account"
-                                        placeholder="Akun Linkedin" value="{{ $profile->linkedin_account }}">
+                                    <input type="text" class="form-control" id="linkedin_account"
+                                        name="linkedin_account" placeholder="Akun Linkedin"
+                                        value="{{ $profile->linkedin_account }}">
                                     <label for="linkedin_account">Akun Linkedin</label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="title" name="title"
-                                placeholder="Title" value="{{ $profile->title }}" required>
-                            <label for="title">Nama Website</label>
-                        </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="tagline" name="tagline"
-                                placeholder="Tagline" value="{{ $profile->tagline }}" required>
-                            <label for="tagline">Tagline</label>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-sm btn-primary"><i
+                                    class="mdi mdi-content-save me-2"></i>Simpan</button>
                         </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Email" value="{{ $profile->email }}" required>
-                            <label for="email">Email</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="office_number" name="office_number"
-                                placeholder="Nomor Kantor" value="{{ $profile->office_number }}" required>
-                            <label for="office_number">Nomor Kantor</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <textarea id="location" name="location" placeholder="Lokasi" cols="30" rows="10">
-                                {{ $profile->location }}
-                            </textarea>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-sm btn-primary"><i
-                            class="mdi mdi-content-save me-2"></i>Simpan</button>
+                <div class="col-md-6 overflow-auto" style="max-height: 670px;">
+                    @include('content.profile.location')
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 

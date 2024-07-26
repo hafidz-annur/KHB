@@ -32,18 +32,22 @@
         <button href="#" class="btn btn-lg-square back-to-top" type="button" data-bs-toggle="dropdown"
             style="background: #27D045"><i class="bi bi-whatsapp text-white"></i>
         </button>
-        <ul class="dropdown-menu">
-            <li>
-                <a class="dropdown-item" href="https://wa.me/{{ $profile->wa_number_1 }}" target="_blank">
-                    <i class="bi bi-phone me-1"></i> {{ $profile->wa_number_1 }}
-                </a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="https://wa.me/{{ $profile->wa_number_2 }}" target="_blank">
-                    <i class="bi bi-phone me-1"></i> {{ $profile->wa_number_2 }}
-                </a>
-            </li>
-        </ul>
+        <div class="dropdown-menu p-3" style="width: 350px">
+            <h6>Ada Pertanyaan!</h6>
+            <p>Hubungi Kami Sekarang untuk Mendapatkan Informasi Lebih Lanjut.</p>
+            <ul class="list-group mt-3">
+                <li class="list-group-item">
+                    <a class="dropdown-item" href="https://wa.me/{{ $profile->wa_number_1 }}" target="_blank">
+                        <i class="bi bi-phone me-1"></i> {{ $profile->wa_number_1 }}
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="dropdown-item" href="https://wa.me/{{ $profile->wa_number_2 }}" target="_blank">
+                        <i class="bi bi-phone me-1"></i> {{ $profile->wa_number_2 }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
@@ -74,6 +78,36 @@
                 allowClear: true
             });
         });
+
+        // Fungsi untuk mengubah semua <oembed> menjadi <iframe>
+        function convertAllOembedToIframe() {
+            // Mendapatkan semua elemen <oembed> di dalam elemen <figure> dengan kelas 'media'
+            var oembedElements = document.querySelectorAll('figure.media oembed');
+
+            // Iterasi melalui semua elemen <oembed>
+            oembedElements.forEach(function(oembedElement) {
+                // Mendapatkan URL dari atribut 'url'
+                var url = oembedElement.getAttribute('url');
+
+                // Membuat elemen <iframe>
+                var iframeElement = document.createElement('iframe');
+
+                // Mengatur atribut untuk <iframe>
+                iframeElement.setAttribute('src', url);
+                iframeElement.setAttribute('width', '100%');
+                iframeElement.setAttribute('height', '490');
+                iframeElement.setAttribute('style', 'border:0;');
+                iframeElement.setAttribute('allowfullscreen', '');
+                iframeElement.setAttribute('loading', 'lazy');
+                iframeElement.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+
+                // Mengganti <oembed> dengan <iframe>
+                oembedElement.parentNode.replaceChild(iframeElement, oembedElement);
+            });
+        }
+
+        // Memanggil fungsi setelah halaman dimuat
+        window.onload = convertAllOembedToIframe;
     </script>
     @yield('script')
 
