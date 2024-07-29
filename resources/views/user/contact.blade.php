@@ -54,17 +54,21 @@
 
                 <div class="card border-0 shadow mt-3 bg-dark text-white">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row g-3">
                             <div class="col-md-6 text-md-start text-center">
                                 <i class="fas fa-envelope me-2"></i> {{ $profile->email }}
                             </div>
-                            <div class="col-md-3 text-center">
-                                <i class="fas fa-phone me-2"></i>
-                                {{ $profile->wa_number_1 }}
-                            </div>
-                            <div class="col-md-3 text-md-end text-center">
-                                <i class="fas fa-phone me-2"></i>
-                                {{ $profile->wa_number_2 }}
+                            <div class="col-md-6 text-center">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-phone me-2"></i>
+                                        {{ $profile->wa_number_1 }}
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-phone me-2"></i>
+                                        {{ $profile->wa_number_2 }}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
