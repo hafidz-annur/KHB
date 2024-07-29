@@ -21,10 +21,10 @@
     </div>
     <!-- Header End -->
 
-    {{-- Portofolio Start  --}}
-    <div class="container my-5">
+    {{-- News Start  --}}
+    <div class="container my-5 px-4">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-md-0 mt-5">
                 <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-6 mb-4">Apa yang Baru di KH Beton?</h1>
                     <p class="mb-0">
@@ -65,7 +65,7 @@
                                     {{ $item->viewed }}x
                                 </small>
                             </div>
-                            <a href="#" class="h5">
+                            <a href="{{ url('berita/' . $item->slug) }}" class="h5">
                                 {{ $item->title }}
                             </a>
                             <p class="my-4">
@@ -85,7 +85,7 @@
             {{ $blogs->links('vendor.pagination.bootstrap-5') }}
         </div>
     </div>
-    {{-- Portofolio End  --}}
+    {{-- News End  --}}
 
     @include('layouts_user.cta')
 @endsection

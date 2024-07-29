@@ -31,14 +31,14 @@
     <!-- Header End -->
 
     {{-- Product Start  --}}
-    <div class="container py-5">
-        <div class="row g-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5 px-4">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-md-8">
                 <div class="section-title mb-5 text-start">
                     <h1 class="display-6 text-muted">
                         {{ $blog->title }}
                     </h1>
-                    <div class="row align-items-center mt-3">
+                    <div class="row align-items-center mt-3 g-2">
                         <div class="col-md-4">
                             <div class="d-flex gap-1">
                                 <small class="badge bg-primary mb-0">

@@ -39,7 +39,7 @@
 @section('content')
     <!-- About Start -->
     <div class="container-fluid about bg-light py-2 overflow-hidden">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="about-img pb-5 ps-5">
@@ -88,7 +88,7 @@
 
     <!-- Service Start -->
     <div class="container-fluid service py-2">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
                     <h4 class="sub-title px-3 mb-0">Kenapa Harus Kami</h4>
@@ -175,7 +175,7 @@
 
     <!-- Product Start -->
     <div class="container-fluid product py-3">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
                     <h4 class="sub-title px-3 mb-0">Produk Kami</h4>
@@ -210,7 +210,7 @@
 
     <!-- Portofolio Start -->
     <div class="container-fluid portofolio py-5">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="sub-style">
                     <h4 class="sub-title px-3 mb-0">Yang Kami Lakukan</h4>
@@ -254,7 +254,7 @@
 
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial py-5">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5">
                 <div class="sub-style">
                     <h4 class="sub-title text-white px-3 mb-0">Klien Kami</h4>
@@ -284,7 +284,7 @@
 
     <!-- Blog Start -->
     <div class="container-fluid blog py-5">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
                     <h4 class="sub-title px-3 mb-0">Berita TERKINI</h4>
@@ -337,7 +337,7 @@
 
     {{-- Certificate Start  --}}
     <div class="container-fluid blog py-5 wow fadeInUp" data-wow-delay="0.3s">
-        <div class="container py-5">
+        <div class="container py-5 px-2">
             <div class="section-title mb-5">
                 <div class="sub-style">
                     <h4 class="sub-title px-3 mb-0">Sertifikasi</h4>

@@ -12,64 +12,67 @@
                             {!! $item->address !!}
                         </div>
                     @endforeach
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-share fa-2x text-white me-2"></i>
-
-                        @if ($profile->facebook_account)
-                            <a href="https://facebook.com/{{ $profile->facebook_account }}"
-                                class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                        @endif
-                        @if ($profile->instagram_account)
-                            <a href="https://instagram.com/{{ $profile->instagram_account }}"
-                                class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                        @endif
-                        @if ($profile->linkedin_account)
-                            <a href="https://linkedin.com/{{ $profile->linkedin_account }}"
-                                class="btn btn-light btn-square border rounded-circle nav-fill me-0" target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        @endif
-                        @if ($profile->x_account)
-                            <a href="https://youtube.com/{{ $profile->x_account }}"
-                                class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
-                                    class="fab fa-youtube"></i></a>
-                        @endif
-                    </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Perusahaan</h4>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Gallery</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Portofolio</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Berita</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Tentang Kami</a>
+                    <a href="{{ url('produk') }}"><i class="fas fa-angle-right me-2"></i> Produk</a>
+                    <a href="{{ url('galeri') }}"><i class="fas fa-angle-right me-2"></i> Galeri</a>
+                    <a href="{{ url('portofolio') }}"><i class="fas fa-angle-right me-2"></i> Portofolio</a>
+                    <a href="{{ url('berita') }}"><i class="fas fa-angle-right me-2"></i> Berita</a>
+                    <a href="{{ url('tentang-kami') }}"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                    <i class="fas fa-share fa-2x text-white me-2"></i>
+
+                    @if ($profile->facebook_account)
+                        <a href="https://facebook.com/{{ $profile->facebook_account }}"
+                            class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                    @endif
+                    @if ($profile->instagram_account)
+                        <a href="https://instagram.com/{{ $profile->instagram_account }}"
+                            class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    @endif
+                    @if ($profile->linkedin_account)
+                        <a href="https://linkedin.com/{{ $profile->linkedin_account }}"
+                            class="btn btn-light btn-square border rounded-circle nav-fill me-0" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    @endif
+                    @if ($profile->x_account)
+                        <a href="https://youtube.com/{{ $profile->x_account }}"
+                            class="btn btn-light btn-square border rounded-circle nav-fill me-3" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                    @endif
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Produk Kami</h4>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Decorative PAVING Block</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Panel Beton Precast</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> U-Ditch & Box Culvert</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Kansteen Kerb All Type</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Concrete Barrier</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Precast Concrete Pile</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Special Ready Mix</a>
+                    @foreach ($category as $item)
+                        <a href="{{ url('produk?category=' . $item->id) }}"><i
+                                class="fas fa-angle-right me-2"></i>{{ $item->name }}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Informasi Kontak</h4>
-                    <a href=""><i class="fas fa-envelope me-2"></i> {{ $profile->email }}</a>
+                    <a href="mailto:{{ $profile->email }}"><i class="fas fa-envelope me-2"></i>
+                        {{ $profile->email }}</a>
                     @foreach ($location as $item)
-                        <a href=""><i class="fas fa-phone me-2"></i> {{ $item->phone }} </a>
+                        <a href="#"><i class="fas fa-phone me-2"></i> {{ $item->phone }} </a>
                     @endforeach
-                    <a href=""><i class="fas fa-phone me-2"></i> {{ $profile->wa_number_1 }} </a>
-                    <a href=""><i class="fas fa-phone me-2"></i> {{ $profile->wa_number_2 }} </a>
+                    <a href="https://wa.me/{{ $profile->wa_number_1 }}" target="_blank"><i
+                            class="fas fa-phone me-2"></i>
+                        {{ $profile->wa_number_1 }} </a>
+                    <a href="https://wa.me/{{ $profile->wa_number_2 }}" target="_blank"><i
+                            class="fas fa-phone me-2"></i>
+                        {{ $profile->wa_number_2 }} </a>
                 </div>
-                Jumlah Pengunjung:
+                Jumlah Pengunjung
                 <span class="badge bg-danger fw-bold px-3">
                     {{ $visitor['total'] }}
                 </span>

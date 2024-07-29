@@ -78,7 +78,7 @@
     <!-- Header End -->
 
     {{-- Product Start  --}}
-    <div class="container py-5">
+    <div class="container py-5 px-4">
         <div class="row g-5">
             <div class="col-md-12">
                 <div class="row g-5">
@@ -139,7 +139,7 @@
                     </div>
                     <div class="col-md-7">
                         <h2 class="mb-1">{{ $product->name }}</h2>
-                        <div class="row align-items-center">
+                        <div class="row align-items-center g-2">
                             <div class="col-md-6">
                                 <div class="d-flex gap-1">
                                     <span class="badge rounded-pill bg-primary text-nowrap py-1">

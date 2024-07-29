@@ -23,7 +23,7 @@
 
     <!-- About Start -->
     <div class="container-fluid about bg-light py-2 overflow-hidden">
-        <div class="container py-5">
+        <div class="container py-5 mt-md-0 mt-5 px-4">
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.2s">
                     <img loading="lazy" src="{{ asset('assets') }}/img/KH_Beton/about_us/image-01-full.jpg"

@@ -23,7 +23,7 @@
 
     {{-- Product Start  --}}
     <div class="container-fluid feature py-5">
-        <div class="container py-5">
+        <div class="container py-5 px-4">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="display-6 mb-4">Solusi Tepat untuk Proyek Anda!</h1>
                 <p class="mb-0">

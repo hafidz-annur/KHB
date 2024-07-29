@@ -28,9 +28,9 @@
     </div>
     <!-- Header End -->
 
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-7 order-md-0 order-1">
+    <div class="container my-5 px-4">
+        <div class="row mt-md-0 mt-5">
+            <div class="col-md-7 order-md-0 order-1 g-4">
 
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\ProductCategory;
 use App\Models\Profile;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\ServiceProvider;
@@ -24,7 +25,8 @@ class ProfileServiceProvider extends ServiceProvider
     // Share profile data with all views
     view()->composer('*', function ($view) {
       $profile = Profile::first();
-      $view->with('profile', $profile);
+      $category = ProductCategory::orderBy('name', 'asc')->get();
+      $view->with('profile', $profile)->with('category', $category);
     });
   }
 }

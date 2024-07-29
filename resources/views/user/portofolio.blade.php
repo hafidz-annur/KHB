@@ -22,9 +22,9 @@
     <!-- Header End -->
 
     {{-- Portofolio Start  --}}
-    <div class="container my-5">
+    <div class="container my-5 px-4">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-md-0 mt-5">
                 <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-6 mb-4">Kekuatan dan Kualitas dalam Setiap Proyek!</h1>
                     <p class="mb-0">
