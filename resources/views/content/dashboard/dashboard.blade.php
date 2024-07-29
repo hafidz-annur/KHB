@@ -162,6 +162,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @if (count($dashboard['latest_contact']) == 0)
+                                            <tr>
+                                                <td colspan="3" class="text-center">
+                                                    Belum ada kontak ditemukan.
+                                                </td>
+                                            </tr>
+                                        @endif
                                         @foreach ($dashboard['latest_contact'] as $item)
                                             <tr>
                                                 <td>

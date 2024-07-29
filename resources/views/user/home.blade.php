@@ -346,14 +346,14 @@
                     Memiliki sertifikasi adalah bukti komitmen kami terhadap kualitas tertinggi.
                 </p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="row row-cols-md-4 row-cols-2 justify-content-center g-3">
+            <div class="row justify-content-center g-4">
+                <div class="col-md-7">
+                    <div class="row row-cols-md-3 row-cols-2 justify-content-center g-3">
                         @foreach ($certificates as $item)
-                            <div class="col text-center py-2">
+                            <div class="col text-center py-2 mb-4">
                                 <img loading="lazy" src="{{ asset('uploaded_files/certificate/' . $item->image) }}"
                                     class="img-fluid w-100 rounded" alt="{{ $item->alt }}"
-                                    style="height: 60px; object-fit:contain">
+                                    style="height: 70px; object-fit:contain">
                             </div>
                         @endforeach
                     </div>
@@ -398,7 +398,7 @@
                 perPage: 5,
                 perMove: 1,
                 gap: 30,
-                interval: 5000,
+                interval: 3000,
                 arrows: false,
                 breakpoints: {
                     640: {

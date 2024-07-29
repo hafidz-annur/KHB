@@ -31,6 +31,7 @@ class HomePage extends Controller
         ->where('is_active', true)
         ->get(),
       'certificates' => ClientCertificate::where('category', 'certificate')
+        ->orderBy('updated_at', 'desc')
         ->where('is_active', true)
         ->get(),
     ];
