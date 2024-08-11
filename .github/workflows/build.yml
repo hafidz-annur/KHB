@@ -42,14 +42,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.DEV_HOST }}
-          username: ${{ secrets.DEV_USERNAME }}
-          key: ${{ secrets.DEV_PRIVATE_KEY }}
-          port: 22
-          proxy_port: 22
-          script: |
-            cd public_html/kh_beton
-            git pull origin production
-            composer install
+      # - uses: appleboy/ssh-action@v1.0.3
+      #   with:
+      #     host: ${{ secrets.DEV_HOST }}
+      #     username: ${{ secrets.DEV_USERNAME }}
+      #     key: ${{ secrets.DEV_PRIVATE_KEY }}
+      #     port: 22
+      #     proxy_port: 22
+      #     script: |
+      #       cd public_html/kh_beton
+      #       git pull origin production
+      #       composer install

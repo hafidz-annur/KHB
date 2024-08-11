@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand p-0">
+    <a href="{{ url('/') }}" class="navbar-brand p-0">
         <img src="{{ asset('uploaded_files/logo/' . $profile->logo_color) }}" alt="{{ $profile->title }}">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
