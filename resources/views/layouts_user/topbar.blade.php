@@ -3,8 +3,8 @@
     <div class="row gx-0 align-items-center" style="height: 45px;">
         <div class="col-lg-8 text-center text-lg-start mb-lg-0">
             <div class="d-flex flex-wrap">
-                <a href="#" class="text-light me-4"><i
-                        class="fas fa-phone-alt text-danger me-2"></i>{{ $profile->office_number }}</a>
+                {{-- <a href="#" class="text-light me-4"><i
+                        class="fas fa-phone-alt text-danger me-2"></i>{{ $profile->office_number }}</a> --}}
                 <a href="mailto:{{ $profile->email }}" class="text-light me-0"><i
                         class="fas fa-envelope text-danger me-2"></i>{{ $profile->email }}</a>
             </div>
