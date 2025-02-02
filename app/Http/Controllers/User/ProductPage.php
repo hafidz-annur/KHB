@@ -9,13 +9,24 @@ use Illuminate\Http\Request;
 
 class ProductPage extends Controller
 {
-  public function index(Request $request)
+  public function index()
   {
-    $search = $request->get('search');
-    $category = $request->get('category');
     $categories = ProductCategory::orderBy('name', 'asc')->get();
 
     $products = Product::where('is_active', true)->paginate(12);
+
+    return view('user.product', [
+      'categories' => $categories,
+      'products' => $products,
+    ]);
+  }
+
+  public function search(Request $request)
+  {
+    $search = $request->input('search');
+    $category = $request->input('category');
+    $categories = ProductCategory::orderBy('name', 'asc')->get();
+
     if ($category || ($category && $search)) {
       $products = Product::where('is_active', true)
         ->where('product_category_id', $category)
@@ -45,26 +56,6 @@ class ProductPage extends Controller
       'categories' => $categories,
       'products' => $products,
     ]);
-  }
-
-  public function search(Request $request)
-  {
-    $search = $request->input('search');
-    $category = $request->input('category');
-
-    $url = 'produk';
-
-    // Menambahkan parameter category jika tersedia
-    if (!empty($category)) {
-      $url .= '?category=' . urlencode($category);
-    }
-
-    // Menambahkan parameter search jika tersedia
-    if (!empty($search)) {
-      $url .= (strpos($url, '?') === false ? '?' : '&') . 'search=' . urlencode($search);
-    }
-
-    return redirect()->to($url);
   }
 
   public function show($slug)
