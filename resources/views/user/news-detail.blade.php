@@ -43,7 +43,7 @@
                             <div class="d-flex gap-1">
                                 <small class="badge bg-primary mb-0">
                                     <i class="fa fa-calendar-alt"></i>
-                                    {{ \Carbon\Carbon::parse($blog->updated_at)->locale('id')->translatedFormat('l, d F Y') }}
+                                    {{ \Carbon\Carbon::parse($blog->created_at)->locale('id')->translatedFormat('l, d F Y') }}
                                 </small>
                                 <small class="badge bg-dark mb-0">
                                     <i class="fas fa-eye me-1"></i>
